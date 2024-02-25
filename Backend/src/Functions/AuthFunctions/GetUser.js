@@ -1,6 +1,6 @@
 const jwt_decode = require("jwt-decode");
 const { sendError, sendResponse } = require("../../Utils/Response");
-
+require("dotenv").config({ path: "../../../.env" });
 module.exports.handler = async (event, context) => {
   context.callbackWaitsForEmptyEventLoop = false;
   try {

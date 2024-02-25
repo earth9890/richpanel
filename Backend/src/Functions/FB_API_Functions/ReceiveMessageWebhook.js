@@ -5,6 +5,7 @@ const { sendError, sendResponse } = require("../../Utils/Response");
 const endpoint = process.env.AWS_API;
 const AWS = require("aws-sdk");
 
+require("dotenv").config({ path: "../../../.env" });
 const gatewayClient = new AWS.ApiGatewayManagementApi({
   apiVersion: "2018-11-29",
   endpoint,

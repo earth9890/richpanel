@@ -2,6 +2,7 @@ const connectToDatabase = require("../../Database/DB");
 const userModel = require("../../Models/User");
 const { sendError, sendResponse } = require("../../Utils/Response");
 
+require("dotenv").config({ path: "../../../.env" });
 module.exports.handler = async (event, context) => {
   context.callbackWaitsForEmptyEventLoop = false;
 

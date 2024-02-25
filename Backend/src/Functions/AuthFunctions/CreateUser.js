@@ -5,6 +5,8 @@ const userModel = require("../../Models/User");
 const bcrypt = require("bcryptjs");
 const { sendError, sendResponse } = require("../../Utils/Response");
 
+require("dotenv").config({ path: "../../../.env" });
+
 async function generateToken(data) {
   const token = await jwt.sign(
     {
